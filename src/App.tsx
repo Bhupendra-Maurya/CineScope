@@ -4,7 +4,8 @@ import { MovieCard } from './components/MovieCard';
 import { MovieDetails } from './components/MovieDetails';
 import { Movie, MovieDetails as MovieDetailsType } from './types';
 
-const API_KEY = 'a64e9d75'; 
+const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -54,7 +55,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">Movie Search</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">Search Movies</h1>
 
         <div className="max-w-2xl mx-auto mb-8">
           <div className="flex gap-2">
